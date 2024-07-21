@@ -100,6 +100,7 @@
 		
 		let handleNextClick = ()=>{
 			if(currPage>0 && currPage<5){ 
+				document.getElementById("prev").disabled = false
 				if(currPage == 4){
 					document.getElementById("next").disabled = true;
 				}
@@ -113,6 +114,11 @@
 			
 			if(currPage<6 && currPage>1){
 				document.getElementById("next").disabled = false;
+				document.getElementById("test").textContent = currPage
+
+				if(currPage == 2){
+					document.getElementById("prev").disabled = true;
+				}
 				document.getElementById(`circle-${currPage}`).classList.remove('active')
 				document.getElementById(`s-${currSpace}`).classList.remove('space-active')
 				currPage--;
