@@ -90,7 +90,6 @@
 		<button class="prev btn" onclick="handlePrevClick()" id="prev">Prev</button>
 		<button class="next btn" onclick="handleNextClick()" id="next">Next</button>
 	</div>
-	<h1 id="test" style="background-color:red;height:50px;width:50px">00</h1>
     <script>
 		let currPage = 1;
 		let currSpace = 0;
@@ -114,7 +113,6 @@
 			
 			if(currPage<6 && currPage>1){
 				document.getElementById("next").disabled = false;
-				document.getElementById("test").textContent = currPage
 
 				if(currPage == 2){
 					document.getElementById("prev").disabled = true;
